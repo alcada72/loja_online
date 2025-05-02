@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { BsCartPlus } from "react-icons/bs";
 import "./CardButton.css"
+import Appcontext from "../../Context/AppContext";
 
 function CardButton() {
+  const { carrinho, mostrarCarrinho, setMostrarCarrinho } = useContext(Appcontext)
+
   return (
-    <button type="button" className="cart__button">
+    <button type="button" onClick={() => setMostrarCarrinho(!mostrarCarrinho)} className="cart__button">
       <BsCartPlus />
-      <span className="cart__status">1</span>
+      {
+        carrinho.length > 0 && <span className="cart__status">{carrinho.length}</span>
+      }
     </button>
   );
 }

@@ -19,6 +19,7 @@
   width: 100%;
 }
 
+
 .card__info {
   padding: 20px;
   border-top: 1px solid #ddd;
@@ -51,4 +52,36 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+
+
+@media (max-width: 400px) {
+  .card__info {
+    padding: 15px;
+  }
+
+  .card__price {
+    font-size: 24px;
+  }
+
+  .card__title {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 720px) {
+  .card__info {
+    padding: 15px;
+  }
+
+  .card__price {
+    font-size: 24px;
+  }
+
+  .card__title {
+    font-size: 14px;
+  }
+  .lista-produto {
+    max-width: 100%;
+  }
 }

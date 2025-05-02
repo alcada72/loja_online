@@ -1,0 +1,47 @@
+.carrinho-item {
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+.Carrinho-Item-img {
+  width: 70px;
+  border: 2px solid #ddd;
+  background: #948f8f10;
+  border-radius: 5px;
+}
+.carrinho-item-titulo {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 8px;
+  max-width: 200px; /* Largura máxima para o título */
+  white-space: nowrap; /* Impede quebra de linha */
+  overflow: hidden; /* Esconde o conteúdo que ultrapassa */
+  text-overflow: ellipsis; /* Adiciona "..." no final */
+}
+
+.carrinho-item-preco {
+  font-size: 25px;
+  font-weight: 500;
+  color: #333;
+  text-align: right;
+}
+
+.carrinho-item-content {
+  padding: 0 35px 0 10px;
+}
+
+.botao-remove-item {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1rem;
+  color: #d83232;
+  border: none;
+  cursor: pointer;
+  background: none;
+}

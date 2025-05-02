@@ -1,19 +1,23 @@
 const BuscarProdutos = async (query) => {
   try {
-    const resposta = await fetch(
-      `https://dummyjson.com/products/search?q=${query}`
-    );
-    
+    const url = query
+      ? `https://dummyjson.com/products/search?q=${encodeURIComponent(query)}`
+      : `https://dummyjson.com/products`;
+
+    const resposta = await fetch(url);
+
     if (!resposta.ok) {
-      throw new Error(`Erro HTTP NO SERVIDOR DA api: ${resposta.status}`);
+      throw new Error(`Erro HTTP na API: ${resposta.status}`);
     }
 
-    const data = await resposta.json();
-    return data.products || []; // Retorna array vazio se não houver resultados
+    const { products = [] } = await resposta.json();
+    return products;
+
   } catch (erro) {
-    console.error("Falha na busca:", erro);
-    return []; // Fallback para evitar quebras no frontend
+    console.error("Falha na busca de produtos:", erro.message);
+    return [];
   }
 };
 
 export default BuscarProdutos;
+// Compare this snippet from src/components/Processador/Preocessador.jsx:

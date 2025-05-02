@@ -5,11 +5,17 @@ import AppContext from './AppContext';
 function Provider({ children }) {
   const [produts, setproduts] = useState([]);
   const [processador, setProcessador] = useState(true)
+  const [carrinho, setCarrinho] = useState([]);
+  const [mostrarCarrinho, setMostrarCarrinho] = useState(false);
   const valor = {
     produts,
     setproduts,
     processador,
-    setProcessador
+    setProcessador,
+    carrinho,
+    setCarrinho,
+    mostrarCarrinho,
+    setMostrarCarrinho
   };
 
   return (
@@ -24,4 +30,3 @@ Provider.propTypes = {
 };
 
 export default Provider;
-// import React, { useState } from 'react';

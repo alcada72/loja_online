@@ -11,7 +11,7 @@ function Produts() {
   const { produts, setproduts, processador, setProcessador } = useContext(Appcontext);
 
   useEffect(() => {
-    BuscarProdutos("iphone").then((resposta) => {
+    BuscarProdutos().then((resposta) => {
       setproduts(resposta);
       setTimeout(() => {
         setProcessador(false)
