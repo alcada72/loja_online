@@ -1,0 +1,15 @@
+.Processador {
+  font-size: 5rem;
+  margin: 120px auto 0;
+  animation: circle 1s linear infinite;
+  width: 100%;
+}
+
+@keyframes circle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
